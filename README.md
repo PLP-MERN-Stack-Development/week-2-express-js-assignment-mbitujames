@@ -1,4 +1,4 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19869285&assignment_repo_type=AssignmentRepo)
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19785020&assignment_repo_type=AssignmentRepo)
 # Express.js RESTful API Assignment
 
 This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
@@ -60,4 +60,38 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
-- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+- [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+
+
+# Product API
+A simple Express.js REST API for managing products.
+
+## How to Run
+npm install
+npm start
+
+Server runs at: http://localhost:3000
+
+## API Endpoints
+All /api/products routes require header:
+x-api-key: 12345
+
+GET /api/products – Get all products
+GET /api/products/:id – Get product by ID
+POST /api/products – Create a product
+PUT /api/products/:id – Update product price
+DELETE /api/products/:id – Delete product
+GET /api/products/filter?category=electronics – Filter by category
+GET /api/products/page?page=1&limit=2 – Pagination
+GET /api/products/search?q=phone – Search by name
+GET /api/products/stats – Product statistics
+
+## Example Request Body
+{
+  "name": "Toaster",
+  "description": "2-slice stainless steel toaster",
+  "price": 25,
+  "category": "kitchen",
+  "inStock": true
+}
